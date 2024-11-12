@@ -1,163 +1,54 @@
-# The Site Configuration
+---
+layout: page
+title: About Me
+permalink: /about/
+---
 
-# Import the theme
-theme: jekyll-theme-chirpy
+# Iamunixtz - Bug Hunter & Drone Maker
 
-# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
-# and doesn't have a custom domain.
-baseurl: ""
+Hello! I am **Iamunixtz**, a passionate Bug Hunter, Red Team Specialist, and Drone Maker. My journey is deeply rooted in cybersecurity, where I focus on uncovering vulnerabilities and creating innovative solutions to strengthen digital security. I also have a love for building drones and pushing the boundaries of technology.
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
-lang: en
+---
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: America/New_York
+## More About Me
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# ↓ --------------------------
+### Cybersecurity Expert
 
-title: Iamunixtz # the main title
+With years of experience in **penetration testing**, **red teaming**, and **bug hunting**, I help organizations secure their infrastructure against cyber threats. I believe in the power of ethical hacking and always strive to find vulnerabilities before the bad actors do.
 
-tagline: Bug Hunter & Drone Maker # it will display as the sub-title
+### Drone Maker
 
-description: A skilled bug hunter, red team specialist, and drone maker dedicated to improving cybersecurity.
+When I'm not hunting bugs, I’m building drones! I enjoy designing and developing drones for various use cases, including surveillance, research, and technology experimentation. It’s my way of blending cybersecurity expertise with innovation.
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars.githubusercontent.com/u/13562529
+---
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: https://www.iamunixtz.com # your actual website URL, if you have one
+## Skills & Expertise
 
-github:
-  username: iamunixtz # change to your github username
+- **Bug Hunting** – Finding and reporting vulnerabilities in applications and systems.
+- **Red Team Operations** – Testing systems by simulating real-world cyber attacks.
+- **Drone Development** – Designing and building drones for security and research purposes.
+- **Cybersecurity Research** – Exploring new technologies and contributing to the security community.
 
-twitter:
-  username: iamunixtz # change to your twitter username
+---
 
-social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Iamunixtz
-  email: email@domain.com # change to your email address
-  links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/iamunixtz # change to your twitter homepage
-    - https://github.com/iamunixtz # change to your github homepage
-    - https://www.linkedin.com/in/iamunixtz # LinkedIn profile link
-    - https://www.instagram.com/iamunixtz # Instagram profile link
-    - https://hackerone.com/iamunixtz # HackerOne profile link
+## Let's Connect!
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+Feel free to reach out to me via any of the following platforms:
 
-# ↑ --------------------------
+- **GitHub**: [@iamunixtz](https://github.com/iamunixtz)
+- **LinkedIn**: [Iamunixtz](https://www.linkedin.com/in/iamunixtz)
+- **Twitter**: [@iamunixtz](https://twitter.com/iamunixtz)
+- **Instagram**: [iamunixtz](https://www.instagram.com/iamunixtz)
+- **HackerOne**: [iamunixtz](https://hackerone.com/iamunixtz)
 
-plugins:
-  - jekyll-paginate
+---
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-analytics:
-  google:
-    id: 
+## Contact Me
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode: # [light|dark]
+If you have any questions, or just want to connect, feel free to drop me an email at:
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn:
+[**email@domain.com**](mailto:email@domain.com)
 
-# boolean type, the global switch for ToC in posts.
-toc: true
+---
 
-disqus:
-
-paginate: 10
-
-# ------------ The following options are not recommended to be modified ------------------
-
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: highlight
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-collections:
-  tabs:
-    output: true
-    sort_by: order
-
-defaults:
-  - scope:
-      path: "" # An empty string here means all files in the project
-      type: posts
-    values:
-      layout: post
-      comments: true # Enable comments in posts.
-      toc: true # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
-      permalink: /:title/
-  - scope:
-      path: _drafts
-    values:
-      comments: false
-  - scope:
-      path: ""
-      type: tabs # see `site.collections`
-    values:
-      layout: page
-      permalink: /:title/
-      dynamic_title: true # Hide title in mobile screens.
-
-sass:
-  style: compressed
-
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
-
-exclude:
-  - "*.gem"
-  - "*.gemspec"
-  - tools
-  - docs
-  - README.md
-  - LICENSE
-  - gulpfile.js
-  - node_modules
-  - package*.json
-
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+Thank you for visiting my page! I'm always excited to collaborate and share knowledge with like-minded individuals in the cybersecurity and tech community.
