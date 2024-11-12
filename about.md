@@ -1,49 +1,163 @@
----
-layout: page
-title: About
-permalink: /about/
----
+# The Site Configuration
 
-# Iamunixtz - Bug Hunter & Drone Maker
+# Import the theme
+theme: jekyll-theme-chirpy
 
-Iamunixtz is a skilled bug hunter and red team specialist, dedicated to improving cybersecurity and creating innovative drone solutions. As a Muslim professional, Iamunixtz combines technical expertise with a commitment to ethical practices in cybersecurity.
+# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
+# and doesn't have a custom domain.
+baseurl: ""
 
-## More Information
+# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# otherwise, the layout language will use the default value of 'en'.
+lang: en
 
-Iamunixtz is passionate about enhancing digital security, tackling vulnerabilities, and exploring new technology, especially drones. With a strong foundation in red teaming, penetration testing, and bug hunting, Iamunixtz has a proven track record of identifying and addressing security risks in both software and hardware.
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: America/New_York
 
-## Social Links
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
 
-You can find me on the following platforms:
+title: Iamunixtz # the main title
 
-- [GitHub](https://github.com/iamunixtz)
-- [Instagram](https://www.instagram.com/iamunixtz)
-- [LinkedIn](https://www.linkedin.com/in/iamunixtz)
-- [Twitter](https://twitter.com/iamunixtz)
-- [HackerOne](https://hackerone.com/iamunixtz)
+tagline: Bug Hunter & Drone Maker # it will display as the sub-title
 
-## Contact me
+description: A skilled bug hunter, red team specialist, and drone maker dedicated to improving cybersecurity.
 
-You can reach out via email at [email@domain.com](mailto:email@domain.com).
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://avatars.githubusercontent.com/u/13562529
 
----
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+url: https://www.iamunixtz.com # your actual website URL, if you have one
 
-## About the Author
+github:
+  username: iamunixtz # change to your github username
 
-Iamunixtz is a security expert and drone maker with extensive experience in bug hunting and red teaming. This page is designed to provide you with a little background about my work and how to reach me.
+twitter:
+  username: iamunixtz # change to your twitter username
 
-**Skills:**
-- Bug Hunting
-- Red Team Specialist
-- Penetration Testing
-- Drone Making
-- Cybersecurity Research
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Iamunixtz
+  email: email@domain.com # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/iamunixtz # change to your twitter homepage
+    - https://github.com/iamunixtz # change to your github homepage
+    - https://www.linkedin.com/in/iamunixtz # LinkedIn profile link
+    - https://www.instagram.com/iamunixtz # Instagram profile link
+    - https://hackerone.com/iamunixtz # HackerOne profile link
 
-**Ethics:**
-As a Muslim professional, I focus on ensuring ethical and responsible practices in all aspects of my work. My goal is to contribute positively to the security and technology communities.
+google_site_verification: google_meta_tag_verification # change to your verification string
 
----
+# ↑ --------------------------
 
-## Contact Form
+plugins:
+  - jekyll-paginate
 
-If you'd like to contact me directly, you can use the following email link: [email@domain.com](mailto:email@domain.com).
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+analytics:
+  google:
+    id: 
+
+# Prefer color scheme setting.
+#
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
+#
+#     light  - Use the light color scheme
+#     dark   - Use the dark color scheme
+#
+theme_mode: # [light|dark]
+
+# The CDN endpoint for images.
+# Notice that once it is assigned, the CDN url
+# will be added to all image (site avatar & posts' images) paths starting with '/'
+#
+# e.g. 'https://cdn.com'
+img_cdn:
+
+# boolean type, the global switch for ToC in posts.
+toc: true
+
+disqus:
+
+paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: true # Enable comments in posts.
+      toc: true # Display TOC column in posts.
+      # DO NOT modify the following parameter unless you are confident enough
+      # to update the code of all other post links in this project.
+      permalink: /:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+      dynamic_title: true # Hide title in mobile screens.
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - tools
+  - docs
+  - README.md
+  - LICENSE
+  - gulpfile.js
+  - node_modules
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
